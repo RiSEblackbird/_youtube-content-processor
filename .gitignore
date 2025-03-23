@@ -1,0 +1,279 @@
+### Python ###
+prompts/
+
+# バイトコンパイル済みファイル
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C拡張
+*.so
+
+# 配布 / パッケージング
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# インストーラログ
+pip-log.txt
+pip-delete-this-directory.txt
+
+# 単体テスト / カバレッジレポート
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# 翻訳
+*.mo
+*.pot
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask
+instance/
+.webassets-cache
+
+# Scrapy
+.scrapy
+
+# Sphinx
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath
+*.sage.py
+
+# 環境変数ファイル
+.env
+.env.*
+!.env.example
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder設定
+.spyderproject
+.spyproject
+
+# Rope設定
+.ropeproject
+
+# mkdocs
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre型チェッカー
+.pyre/
+
+# pytype静的型アナライザ
+.pytype/
+
+# Cython debug
+cython_debug/
+
+### Docker ###
+.dockerignore
+docker-compose.override.yml
+docker-compose.prod.yml
+
+### IDE ###
+# VSCode
+.vscode/
+*.code-workspace
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.idea_modules/
+
+# PyCharm
+.idea/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+### macOS ###
+# 一般
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# アイコン
+Icon
+
+# サムネイル
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+### Windows ###
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Dump file
+*.stackdump
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+### Linux ###
+*~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
+
+### アプリケーション固有 ###
+# ログファイル
+logs/
+*.log
+
+# 機密設定ファイル
+credentials.json
+client_secrets.json
+service-account.json
+*-key.json
+*.pem
+*.key
+
+# データベースファイル
+*.db
+*.sqlite
+*.sqlite3
+
+# キャッシュファイル
+.cache/
+.pytest_cache/
+
+# バックアップファイル
+*.bak
+*.backup
+*~
+
+# GCPデプロイファイル
+app.yaml
+.gcloudignore
+
+# プロジェクト固有
+.coverage
+coverage.xml
+.pytest_cache/
+htmlcov/
+.mypy_cache/
+
+# 一時ファイル
+tmp/
+temp/

@@ -1,0 +1,68 @@
+# GCPサービス構成
+# Cloud Runでのデプロイ用設定
+
+# サービス定義
+service: youtube-content-processor
+region: asia-northeast1  # 東京リージョン
+
+# コンテナ設定
+containers:
+  - image: gcr.io/PROJECT_ID/youtube-content-processor:latest
+    env:
+      - name: DB_HOST
+        valueFrom:
+          secretKeyRef:
+            name: app-secrets
+            key: DB_HOST
+      - name: DB_USER
+        valueFrom:
+          secretKeyRef:
+            name: app-secrets
+            key: DB_USER
+      - name: DB_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            name: app-secrets
+            key: DB_PASSWORD
+      - name: DB_NAME
+        valueFrom:
+          secretKeyRef:
+            name: app-secrets
+            key: DB_NAME
+      - name: SECRET_KEY
+        valueFrom:
+          secretKeyRef:
+            name: app-secrets
+            key: SECRET_KEY
+      - name: ANTHROPIC_API_KEY
+        valueFrom:
+          secretKeyRef:
+            name: app-secrets
+            key: ANTHROPIC_API_KEY
+      - name: OPENAI_API_KEY
+        valueFrom:
+          secretKeyRef:
+            name: app-secrets
+            key: OPENAI_API_KEY
+      - name: GCP_PROJECT_ID
+        valueFrom:
+          secretKeyRef:
+            name: app-secrets
+            key: GCP_PROJECT_ID
+
+# スケーリング設定
+scaling:
+  minInstances: 1
+  maxInstances: 10
+
+# リソース割り当て
+resources:
+  cpuLimit: 2
+  memoryLimit: 4Gi
+  
+# 接続設定
+connections:
+  - name: cloud-sql
+    cloudsql:
+      instances:
+        - instanceName: PROJECT_ID:REGION:youtube-content-processor-db
